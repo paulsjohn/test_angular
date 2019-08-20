@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { HttpService } from 'src/app/services/http.service';
+import { first, take } from 'rxjs/operators';
+import { EMPTY, range } from 'rxjs';
 
 
 
@@ -35,7 +38,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ListingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -44,6 +47,9 @@ export class ListingComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
+    this.httpService.getAll().pipe().subscribe(data => {
+      console.log(data);
+    });
   }
 
 }
