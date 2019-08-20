@@ -1,0 +1,43 @@
+<div id="sidebar">
+    <mat-nav-list>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/dashboard']">
+            <mat-icon class="sidenav-icon">dashboard</mat-icon> {{ 'Dashboard' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen1']">
+            <mat-icon class="sidenav-icon">assignment</mat-icon> {{ 'Work Reports' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+            <mat-icon class="sidenav-icon">people</mat-icon> {{ 'Representatives' | translate }}
+        </a>
+
+        <mat-divider></mat-divider>
+        <h3 matSubheader>Administration</h3>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/headquarter']">
+            <mat-icon class="sidenav-icon">location_city</mat-icon> {{ 'Headquarters' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+            <mat-icon class="sidenav-icon">photo_size_select_small</mat-icon> {{ 'Areas' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+            <mat-icon class="sidenav-icon">local_hospital</mat-icon> {{ 'Hospitals' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+            <mat-icon class="sidenav-icon">perm_contact_calendar</mat-icon> {{ 'Doctors' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+            <mat-icon class="sidenav-icon">kitchen</mat-icon> {{ 'Chemists' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+            <mat-icon class="sidenav-icon">store</mat-icon> {{ 'Stockists' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+            <mat-icon class="sidenav-icon">category</mat-icon> {{ 'Product Categories' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+            <mat-icon class="sidenav-icon">healing</mat-icon> {{ 'Products' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+            <mat-icon class="sidenav-icon">compare_arrows</mat-icon> {{ 'Import & Export' | translate }}
+        </a>
+    </mat-nav-list>
+</div>
